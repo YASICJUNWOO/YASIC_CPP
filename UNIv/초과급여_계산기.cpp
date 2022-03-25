@@ -1,19 +1,21 @@
+/*ì´ˆê³¼ ê·¼ë¬´ ì‹œê°„ì— ë”°ë¥¸ ê¸‰ì—¬ ê³„ì‚°*/
+
 #include <iostream>
-#include <iomanip>  /*set,setprecision °°Àº ¸Å°³º¯¼öÈ­µÈ
-                      ½ºÆ®¸² Á¶ÀÛÀÚ ÇÔ¼ö Á¦°ø
-					   std::dec	º¯¼ö°ªÀ» 10Áø¼ö·Î Ãâ·Â
-					   std::hex	º¯¼ö°ªÀ» 16Áø¼ö·Î Ãâ·Â
-					   std::setw	¹®ÀÚ¿­ Ãâ·Â½Ã °³¼ö ÁöÁ¤
-					   std::setfill	°ø¹éÀ» Ã¤¿ï ¹®ÀÚ ÁöÁ¤
-					   std::left	¿ŞÂÊ Á¤·Ä(align)*/
+#include <iomanip>  /*set,setprecision ê°™ì€ ë§¤ê°œë³€ìˆ˜í™”ëœ
+                      ìŠ¤íŠ¸ë¦¼ ì¡°ì‘ì í•¨ìˆ˜ ì œê³µ
+					   std::dec	ë³€ìˆ˜ê°’ì„ 10ì§„ìˆ˜ë¡œ ì¶œë ¥
+					   std::hex	ë³€ìˆ˜ê°’ì„ 16ì§„ìˆ˜ë¡œ ì¶œë ¥
+					   std::setw	ë¬¸ìì—´ ì¶œë ¥ì‹œ ê°œìˆ˜ ì§€ì •
+					   std::setfill	ê³µë°±ì„ ì±„ìš¸ ë¬¸ì ì§€ì •
+					   std::left	ì™¼ìª½ ì •ë ¬(align)*/
 using namespace std;
 
 int main() {
 	double hours, rate, regularPay, overPay=0.0, totalPay;
 
-	cout << "¾÷¹« ½Ã°£À» ÀÔ·ÂÇÏ¼¼¿ä: ";
+	cout << "ì—…ë¬´ ì‹œê°„ì„ ì…ë ¥í•˜ì„¸ìš”: ";
 	cin >> hours;
-	cout << "½Ã°£´ç ±Ş¿©¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ";
+	cout << "ì‹œê°„ë‹¹ ê¸‰ì—¬ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ";
 	cin >> rate;
 	regularPay = hours * rate;
 
@@ -24,12 +26,10 @@ int main() {
 
 	totalPay = regularPay + overPay;
 	
-	cout << fixed << showpoint;  //fixed : Á¤¼öºÎ Á¦¿Ü nÀÚ¸®, showpoint : µÚ¿¡ 0Ç¥½Ã
-	cout << "ÀÏ¹İ ±Ş¿© =" << setprecision(2) << regularPay << endl;
-	//setprecision(n) : ¼Ò¼öÁ¤ ÀÚ¸®¼ö Ç¥½Ã
-	cout << "ÃÊ°ú ±Ù¹«¿¡ ´ëÇÑ ±Ş¿©=" << setprecision(2) << overPay << endl;
-	cout << "ÀüÃ¼ ±Ş¿© =" << setprecision(2) << totalPay << endl;
+	cout << fixed << showpoint;  //fixed : ì •ìˆ˜ë¶€ ì œì™¸ nìë¦¬, showpoint : ë’¤ì— 0í‘œì‹œ
+	cout << "ì¼ë°˜ ê¸‰ì—¬ =" << setprecision(2) << regularPay << endl;
+	//setprecision(n) : ì†Œìˆ˜ì • ìë¦¬ìˆ˜ í‘œì‹œ
+	cout << "ì´ˆê³¼ ê·¼ë¬´ì— ëŒ€í•œ ê¸‰ì—¬=" << setprecision(2) << overPay << endl;
+	cout << "ì „ì²´ ê¸‰ì—¬ =" << setprecision(2) << totalPay << endl;
 	return 0;
 }
-
-/*ÃÊ°ú ±Ù¹« ½Ã°£¿¡ µû¸¥ ±Ş¿© °è»ê*/
